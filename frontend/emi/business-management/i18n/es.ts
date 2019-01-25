@@ -1,0 +1,68 @@
+export const locale = {
+  lang: 'es',
+  data: {
+    BUSINESS: {
+      ID_SYSTEM: 'ID',
+      DOCUMENT_TYPE: 'Tipo documento',
+      DOCUMENT_ID: 'N. Documento identificación',
+      CITIZENSHIP_CARD: 'Cédula de ciudadanía',
+      FOREIGNER_ID: 'Cédula de extranjería',
+      VAT: 'NIT',
+      PASSPORT: 'Pasaporte',
+      TYPE: 'Naturaleza',
+      BUSINESS: 'Unidades de negocio',
+      NAME: 'Nombre',
+      CONTACTINFO: 'Información contacto',
+      EMAIL: 'Email',
+      ACTIVE: 'Activo',
+      SEARCH: 'Buscar',
+      ADD_BUSINESS: 'Agregar unidad de negocio',
+      BUSINESS_DETAIL: 'Detalle de la unidad de negocio',
+      SELECT_BUSINESS_TYPE: 'Seleccione naturaleza',
+      BUSINESS_TYPE_LEGAL: 'Persona jurídica',
+      BUSINESS_TYPE_NATURAL: 'Persona natural',
+      LEGAL: 'Persona jurídica',
+      NATURAL: 'Persona natural',
+      GENERAL_INFO: 'Información general',
+      ATTRIBUTES: 'Atributos',
+      ATTRIBUTE_KEY: 'Nombre',
+      ATTRIBUTE_VALUE: 'Valor',
+      SAVE: 'Guardar',
+      DELETE: 'Eliminar',
+      CREATE: 'Crear',
+      CANCEL: 'Cancelar',
+      REMOVE_BUSINESS_MESSAGE: '¿Estás seguro que desea eliminar la unidad de negocio?',
+      UPDATE_BUSINESS_MESSAGE: '¿Estás seguro que desea modificar la unidad de negocio?',
+      UPDATE_BUSINESS_TITLE: 'Actualizar negocio',
+      REMOVE_BUSINESS_TITLE: 'Remover negocio',
+      CREATE_BUSINESS_TITLE: 'Crear negocio',
+      CREATE_BUSINESS_MESSAGE: '¿Estás seguro que desea crear la unidad de negocio?',
+      INVALID: 'inválido',
+      DOCUMENT_ID_IS: 'N. documento de identificación es',
+      NAME_IS: 'Nombre es',
+      EMAIL_IS: 'Email es',
+      REQUIRED: 'Requerido',
+      ITEMS_PER_PAGE: 'Items por pagina',
+      OF: 'de',
+      BUSINESS_CREATED: 'La unidad de negocio ha sido creada.',
+      BUSINESS_UPDATED: 'La unidad de negocio ha sido actualizada.',
+      ATTRIBUTES_UPDATED: 'Los atributos de la unidad de negocio han sido actualizados.',
+      CLOSE: 'Cerrar',
+      MANAGE_USER: 'Gestionar usuarios',
+      CONTACT_INFO: {
+        TAB_LABEL: 'Información de contacto',
+        WHATSAPP: 'Whatsapp',
+        PHONE: 'Teléfono',
+        ZELLO: 'Zello',
+        SAVE: 'Guardar'
+      }
+    },
+    ERRORS: {
+      15001: 'Error interno de servidor',
+      15002: 'Permiso denegado.',
+      15010: 'Datos faltantes de la unidad de negocio',
+      15011: 'Nombre de la unidad de negocio ya existe'
+    }
+  }
+};
+

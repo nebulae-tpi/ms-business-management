@@ -1,0 +1,50 @@
+[
+    {
+        "name": "business-management",
+        "src": "frontend/emi/business-management",
+        "groups": [
+            {
+            "id": "BUSINESS_UNIT_MANAGER",
+            "icon": "location_searching",
+            "translate": {
+                "en": "Business units",
+                "es": "Unidades de negocio"
+            },
+            "priority": 200
+            }
+          ],
+          "subgroups": [
+            {
+                "groupId": "BUSINESS_UNIT_MANAGER",
+                "id": "management",
+                "icon": "settings",
+                "translate": {
+                    "en": "Management",
+                    "es": "Gestión"
+                },
+                "priority": 2000
+            }
+        ],
+        "contents": [
+            {
+                "groupId": "BUSINESS_UNIT_MANAGER",
+                "subgroupId": "management",
+                "id": "business-management",
+                "icon": "business",
+                "translate": {
+                    "en": "Units",
+                    "es": "Unidades"
+                },
+                "navURL": "/business-management",
+                "path": "business-management",
+                "loadChildren": "./main/content/business-management/business-management.module#BusinessManagementModule",
+                "priority": 3000,
+                "roles" : ["PLATFORM-ADMIN"],
+                "default" : false
+            }            
+        ],
+        "preBuildCommands": ["npm i angular4-material-table@0.6.0"],
+        "environmentVars": {
+        }
+    }
+]

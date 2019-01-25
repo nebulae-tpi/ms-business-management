@@ -1,0 +1,34 @@
+<div class="tab-content p-24" fxLayout="column" fusePerfectScrollbar>
+
+  <form name="businessContactInfoForm" [formGroup]="businessContactInfoForm" fxLayout="row wrap" class="mat-white-bg p-24 mr-24 mb-24">
+
+      <mat-form-field fxFlex="100" fxLayout="column" class="pr-8 pl-8">
+          <input required type="number" matInput name="whatsapp" formControlName="whatsapp" maxlength="15" placeholder="{{'BUSINESS.CONTACT_INFO.WHATSAPP' | translate}}">
+          <mat-error *ngIf="businessContactInfoForm.hasError('required', ['whatsapp'])">
+              {{'BUSINESS.CONTACT_INFO.WHATSAPP_REQUIRED' | translate}}
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field fxFlex="100" fxLayout="column" class="pr-8 pl-8">
+          <input type="number" required matInput matTextareaAutosize name="phone" formControlName="phone" maxlength="350" placeholder="{{'BUSINESS.CONTACT_INFO.PHONE' | translate}}" matAutosizeMinRows="1" matAutosizeMaxRows="5">
+          <mat-error *ngIf="businessContactInfoForm.hasError('required', ['phone'])">
+              {{'BUSINESS.CONTACT_INFO.PHONE_REQUIRED' | translate}}
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field required fxFlex="100" fxLayout="column" class="pr-8 pl-8">
+          <input required matInput matTextareaAutosize name="zello" formControlName="zello" maxlength="350" placeholder="{{'BUSINESS.CONTACT_INFO.ZELLO' | translate}}" matAutosizeMinRows="1" matAutosizeMaxRows="5">
+          <mat-error *ngIf="businessContactInfoForm.hasError('required', ['zello'])">
+              {{'BUSINESS.CONTACT_INFO.ZELLO_REQUIRED' | translate}}
+          </mat-error>
+      </mat-form-field>
+
+      <div class="mt-16">
+          <button mat-raised-button (click)="saveBusinessContactInfo()" [disabled]="businessContactInfoForm.invalid || businessContactInfoForm.pristine">
+            {{'BUSINESS.CONTACT_INFO.SAVE' | translate}}
+          </button>
+      </div>
+
+  </form>
+
+</div>
