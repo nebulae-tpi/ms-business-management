@@ -54,7 +54,10 @@ export const locale = {
         WHATSAPP: 'Whatsapp',
         PHONE: 'Teléfono',
         ZELLO: 'Zello',
-        SAVE: 'Guardar'
+        SAVE: 'Guardar',
+        WHATSAPP_REQUIRED: 'Whatsapp',
+        PHONE_REQUIRED: 'Phone field required',
+        ZELLO_REQUIRED: 'Zello field is required'
       }
     },
     ERRORS: {

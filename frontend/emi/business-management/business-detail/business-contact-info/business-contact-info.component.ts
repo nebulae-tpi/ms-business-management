@@ -12,10 +12,11 @@ import { MatDialog, MatSnackBar } from '@angular/material';
 import { TableDataSource, ValidatorService } from 'angular4-material-table';
 
 ////////// RXJS ///////////
-import { first, filter, map } from 'rxjs/operators';
+import { first, filter, map, tap } from 'rxjs/operators';
 
 ////////// COMPONENTS AND SERVICES //////////
 import { BusinessDetailService } from '../business-detail.service';
+import { FuseTranslationLoaderService } from '../../../../../core/services/translation-loader.service';
 
 export class Attribute {
   key: string;
@@ -41,8 +42,10 @@ export class BusinessContactInfoComponent implements OnInit {
     private formBuilder: FormBuilder,
     private businessDetailService: BusinessDetailService,
     private dialog: MatDialog,
-    private snackBar: MatSnackBar
-  ) {}
+    private snackBar: MatSnackBar,
+    private translationLoader: FuseTranslationLoaderService
+  ) {
+  }
 
 
   ngOnInit() {
@@ -50,7 +53,15 @@ export class BusinessContactInfoComponent implements OnInit {
 
   saveBusinessContactInfo() {
     this.businessDetailService.updateBusinessContactInfo$(this._business._id, this.businessContactInfoForm.getRawValue())
-      .subscribe(() => { }, err => console.log(err), () => console.log('FINISHED'));
+    .pipe(
+      tap(() =>
+        this.snackBar.open(this.translationLoader.getTranslate().instant('BUSINESS.BUSINESS_CREATED'),
+          this.translationLoader.getTranslate().instant('BUSINESS.CLOSE'), {
+            duration: 4000
+          })
+      )
+    )
+    .subscribe(() => { }, err => console.log(err), () => console.log('FINISHED'));
   }
 
   @Input()

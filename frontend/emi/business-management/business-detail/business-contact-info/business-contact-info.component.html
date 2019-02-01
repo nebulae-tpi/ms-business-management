@@ -10,14 +10,14 @@
       </mat-form-field>
 
       <mat-form-field fxFlex="100" fxLayout="column" class="pr-8 pl-8">
-          <input type="number" required matInput matTextareaAutosize name="phone" formControlName="phone" maxlength="350" placeholder="{{'BUSINESS.CONTACT_INFO.PHONE' | translate}}" matAutosizeMinRows="1" matAutosizeMaxRows="5">
+          <input type="number" required matInput matTextareaAutosize name="phone" formControlName="phone" maxlength="15" placeholder="{{'BUSINESS.CONTACT_INFO.PHONE' | translate}}" matAutosizeMinRows="1" matAutosizeMaxRows="5">
           <mat-error *ngIf="businessContactInfoForm.hasError('required', ['phone'])">
               {{'BUSINESS.CONTACT_INFO.PHONE_REQUIRED' | translate}}
           </mat-error>
       </mat-form-field>
 
       <mat-form-field required fxFlex="100" fxLayout="column" class="pr-8 pl-8">
-          <input required matInput matTextareaAutosize name="zello" formControlName="zello" maxlength="350" placeholder="{{'BUSINESS.CONTACT_INFO.ZELLO' | translate}}" matAutosizeMinRows="1" matAutosizeMaxRows="5">
+          <input required matInput matTextareaAutosize name="zello" formControlName="zello" maxlength="20" placeholder="{{'BUSINESS.CONTACT_INFO.ZELLO' | translate}}" matAutosizeMinRows="1" matAutosizeMaxRows="5">
           <mat-error *ngIf="businessContactInfoForm.hasError('required', ['zello'])">
               {{'BUSINESS.CONTACT_INFO.ZELLO_REQUIRED' | translate}}
           </mat-error>

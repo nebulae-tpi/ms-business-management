@@ -47,11 +47,8 @@ export class BusinessAttributesComponent implements OnInit {
   addNewBusiness: Boolean;
 
   constructor(
-    private formBuilder: FormBuilder,
     private businessDetailService: BusinessDetailService,
     private businessAttributesValidatorService: BusinessAttributesValidatorService,
-    private dialog: MatDialog,
-    private snackBar: MatSnackBar
   ) {}
 
 
