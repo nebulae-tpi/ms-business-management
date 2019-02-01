@@ -55,7 +55,7 @@ export class BusinessContactInfoComponent implements OnInit {
     this.businessDetailService.updateBusinessContactInfo$(this._business._id, this.businessContactInfoForm.getRawValue())
     .pipe(
       tap(() =>
-        this.snackBar.open(this.translationLoader.getTranslate().instant('BUSINESS.BUSINESS_CREATED'),
+        this.snackBar.open(this.translationLoader.getTranslate().instant('BUSINESS.CONTACT_INFO_UPDATED'),
           this.translationLoader.getTranslate().instant('BUSINESS.CLOSE'), {
             duration: 4000
           })

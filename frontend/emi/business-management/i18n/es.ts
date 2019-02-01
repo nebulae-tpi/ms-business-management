@@ -45,6 +45,7 @@ export const locale = {
       ITEMS_PER_PAGE: 'Items por pagina',
       OF: 'de',
       BUSINESS_CREATED: 'La unidad de negocio ha sido creada.',
+      CONTACT_INFO_UPDATED: 'La información de contacto ha sido actualizada',
       BUSINESS_UPDATED: 'La unidad de negocio ha sido actualizada.',
       ATTRIBUTES_UPDATED: 'Los atributos de la unidad de negocio han sido actualizados.',
       CLOSE: 'Cerrar',
