@@ -15,12 +15,14 @@
             <mat-tab label="{{'BUSINESS.GENERAL_INFO' | translate}}">
               <br>
               <div>
+
                 <mat-form-field class="w-100-p" *ngIf="!addNewBusiness">
                   <input matInput name="idSystem" formControlName="idSystem" [(ngModel)]="selectedBusiness._id" placeholder="{{'BUSINESS.ID_SYSTEM' | translate}}">
                 </mat-form-field>
+
                 <mat-form-field class="w-100-p">
-                  <input matInput name="name" formControlName="name" [(ngModel)]="selectedBusiness.generalInfo.name"
-                    placeholder="{{'BUSINESS.NAME' | translate}}" required>
+                  <input matInput name="name" formControlName="name" [(ngModel)]="selectedBusiness.generalInfo.name" placeholder="{{'BUSINESS.NAME' | translate}}"
+                    maxlength="40" required>
                   <mat-error *ngIf="businessForm.hasError('required', 'name')">
                     {{'BUSINESS.NAME_IS' | translate}}
                     <strong>{{'BUSINESS.REQUIRED' | translate}}</strong>
@@ -40,7 +42,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="w-100-p">
-                  <input matInput name="documentId" formControlName="documentId" [(ngModel)]="selectedBusiness.generalInfo.documentId"
+                  <input matInput name="documentId" maxlength="20" formControlName="documentId" [(ngModel)]="selectedBusiness.generalInfo.documentId"
                     placeholder="{{'BUSINESS.DOCUMENT_ID' | translate}}" required>
                   <mat-error *ngIf="businessForm.hasError('required', 'documentId')">
                     {{'BUSINESS.DOCUMENT_ID_IS' | translate}}
@@ -60,7 +62,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="w-100-p">
-                  <input matInput name="email" formControlName="email" [(ngModel)]="selectedBusiness.generalInfo.email"
+                  <input matInput name="email" maxlength="40" formControlName="email" [(ngModel)]="selectedBusiness.generalInfo.email"
                     placeholder="{{'BUSINESS.EMAIL' | translate}}" required>
                   <mat-error *ngIf="businessForm.hasError('required', 'email')">
                     {{'BUSINESS.EMAIL_IS' | translate}}
@@ -74,7 +76,7 @@
 
                 <mat-form-field class="w-100-p">
                   <textarea matInput name="contactInfo" formControlName="contactInfo" [(ngModel)]="selectedBusiness.generalInfo.contactInfo"
-                    placeholder="{{'BUSINESS.CONTACTINFO' | translate}}" rows="5">
+                    placeholder="{{'BUSINESS.CONTACTINFO' | translate}}" rows="5" maxlength="300" >
                           </textarea>
                 </mat-form-field>
 
@@ -86,10 +88,12 @@
               </div>
 
               <div class="mt-16">
-                <button mat-raised-button *ngIf="addNewBusiness" (click)="createBusiness()" [disabled]="businessForm.invalid || businessForm.pristine">{{'BUSINESS.CREATE'
-                  | translate}}</button>
-                <button mat-raised-button *ngIf="!addNewBusiness && selectedBusiness._id" (click)="updateBusiness()" [disabled]="businessForm.invalid || businessForm.pristine">{{'BUSINESS.SAVE'
-                  | translate}}</button>
+                <button mat-raised-button *ngIf="addNewBusiness" (click)="createBusiness()" [disabled]="businessForm.invalid || businessForm.pristine">
+                  {{'BUSINESS.CREATE'| translate}}
+                </button>
+                <button mat-raised-button *ngIf="!addNewBusiness && selectedBusiness._id" (click)="updateBusiness()" [disabled]="businessForm.invalid || businessForm.pristine">
+                  {{'BUSINESS.SAVE' | translate}}
+                </button>
               </div>
 
             </mat-tab>
@@ -103,7 +107,7 @@
             <mat-tab label="{{'BUSINESS.CONTACT_INFO.TAB_LABEL' | translate}}" *ngIf="!addNewBusiness && selectedBusiness._id">
               <div class="w-100-p">
                 <mat-divider></mat-divider>
-                <business-contact-info [business]="selectedBusiness"  (businessContactInfoChange)="businessContactInfoChanged($event)">
+                <business-contact-info [business]="selectedBusiness" (businessContactInfoChange)="businessContactInfoChanged($event)">
                 </business-contact-info>
                 <!-- <app-business-attributes *ngIf="selectedBusiness" businessId="{{selectedBusiness._id}}" (businessAttributesListChange)="handleBusinessAttributesChangedEvent($event)"></app-business-attributes> -->
               </div>
