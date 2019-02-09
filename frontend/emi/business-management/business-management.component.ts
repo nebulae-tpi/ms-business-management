@@ -335,6 +335,7 @@ export class BusinessManagementComponent implements OnInit, OnDestroy {
     });
   }
 
+  
   /**
    * Destroys and remove all the used resources  (subscriptions, ...)
    */
