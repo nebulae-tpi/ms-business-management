@@ -89,7 +89,7 @@ module.exports = {
         "myBusiness",
         BUSINESS_PERMISSION_DENIED_ERROR_CODE,
         "Permission denied",
-        ["BUSINESS-OWNER", "PLATFORM-ADMIN", "POS", "SATELLITE", "OPERATOR", "BUSINESS-ADMIN", "BUSINESS-VIEWER"]
+        ["BUSINESS-OWNER", "PLATFORM-ADMIN", "POS", "SATELLITE", "OPERATOR", "BUSINESS-ADMIN", "BUSINESS-VIEWER", "COORDINATOR"]
       )
         .pipe(
           mergeMap(() =>

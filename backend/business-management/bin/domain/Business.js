@@ -62,7 +62,7 @@ class Business {
       "getMyBusiness$",
       BUSINESS_PERMISSION_DENIED_ERROR_CODE,
       "Permission denied",
-      ["BUSINESS-OWNER", "PLATFORM-ADMIN", "POS", "SATELLITE", "OPERATOR", "BUSINESS-ADMIN", "BUSINESS-VIEWER"]
+      ["BUSINESS-OWNER", "PLATFORM-ADMIN", "POS", "SATELLITE", "OPERATOR", "BUSINESS-ADMIN", "BUSINESS-VIEWER", "COORDINATOR"]
       )
       .mergeMap(roles => {
         const businessId = authToken.businessId || '';
