@@ -56,6 +56,7 @@ class Business {
    * @param {*} args.businessId business ID
    */
   getMyBusiness$({ args }, authToken) {
+    
     return RoleValidator.checkPermissions$(
       authToken.realm_access.roles,
       "BusinessManagement",
