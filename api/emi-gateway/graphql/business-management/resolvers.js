@@ -129,7 +129,6 @@ module.exports = {
         .toPromise();
     },
     getBusinesses(root, args, context) {
-      console.log("getBusinesses", args);
       return RoleValidator.checkPermissions$(
         context.authToken.realm_access.roles,
         contextName,
