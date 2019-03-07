@@ -9,6 +9,7 @@ import {
   subscribeBusinessUpdatedSubscription
 } from './gql/BusinessManagement';
 
+
 @Injectable()
 export class BusinessManagementService {
 
