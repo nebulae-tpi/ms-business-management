@@ -59,15 +59,12 @@ class BusinessEventConsumer {
     }
 
     handleBusinessContactInfoUpdated$(businessContactInfoUpdatedEvt){
-        console.log('handleBusinessContactInfoUpdated', businessContactInfoUpdatedEvt);
         return Rx.Observable.of(businessContactInfoUpdatedEvt)
         .map(evt => ({
             buId: evt.aid,
             buContactInfo: evt.data
         }))
-        .mergeMap(update => BusinessDA.updateBusinessContactInfo$(update.buId, update.buContactInfo))
-        .do(r => console.log( "Resultado de la actualizacion ==> ", r))
-        
+        .mergeMap(update => BusinessDA.updateBusinessContactInfo$(update.buId, update.buContactInfo))        
     }
 
 }

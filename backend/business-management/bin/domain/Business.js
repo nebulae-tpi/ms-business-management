@@ -408,7 +408,6 @@ class Business {
   }
 
   updateBusinessContatInfo$({ root, args, jwt }, authToken){
-    console.log('updateBusinessContatInfo', args);
     return RoleValidator.checkPermissions$(
       authToken.realm_access.roles,
       "BusinessManagement",

@@ -12,7 +12,6 @@ import {
 @Injectable()
 export class BusinessManagementService {
 
-
   constructor(private gateway: GatewayService) {
 
   }
