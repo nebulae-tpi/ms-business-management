@@ -15,6 +15,8 @@ export const locale = {
       CONTACTINFO: 'Información contacto',
       EMAIL: 'Email',
       ACTIVE: 'Activo',
+      PAY_PER_SERVICE: 'Pago por servicio',
+      PAY_PER_SERVICE_VALUE: 'Valor',
       SEARCH: 'Buscar',
       ADD_BUSINESS: 'Agregar unidad de negocio',
       BUSINESS_DETAIL: 'Detalle de la unidad de negocio',

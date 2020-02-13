@@ -16,6 +16,8 @@ export const locale = {
       BUSINESS_FORMAT: 'Format',
       EMAIL: 'Email',
       ACTIVE: 'Active',
+      PAY_PER_SERVICE: 'Payment per service',
+      PAY_PER_SERVICE_VALUE: 'Value',
       SEARCH: 'Search',
       ADD_BUSINESS: 'Add agent',
       BUSINESS_DETAIL: 'Agent detail',

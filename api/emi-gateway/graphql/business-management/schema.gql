@@ -20,6 +20,10 @@ input BusinessGeneralInfoInput {
   email: String,
   "Business contact info"
   contactInfo: String
+  "Allow Pay per service"
+  allowPayPerService: Boolean
+  "Pay per service"
+  payPerServicePrice: Int
 }
 
 input BusinessAttributeListInput {
@@ -60,6 +64,10 @@ type GeneralInfo {
   email: String,
   "Business contact info"
   contactInfo: String
+  "Allow Pay per service"
+  allowPayPerService: Boolean
+  "Pay per service"
+  payPerServicePrice: Int
 }
 
 type BusinessContactInfo {

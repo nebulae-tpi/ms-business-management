@@ -70,7 +70,8 @@ export class BusinessDetailComponent implements OnInit {
     this.addNewBusiness = businessDetailAction == "ADD";
     this.selectedBusiness = {
       generalInfo: {},
-      active: false
+      active: false,
+      allowPayPerService: false
     };
   }
 
@@ -90,6 +91,8 @@ export class BusinessDetailComponent implements OnInit {
       type: new FormControl(),
       email: new FormControl("", Validators.email),
       active: new FormControl(),
+      allowPayPerService: new FormControl(),
+      payPerServiceValue: new FormControl(),
       contactInfo: new FormControl()
     });
   }
@@ -191,7 +194,9 @@ export class BusinessDetailComponent implements OnInit {
               name: this.selectedBusiness.generalInfo.name,
               type: this.selectedBusiness.generalInfo.type,
               email: this.selectedBusiness.generalInfo.email,
-              contactInfo: this.selectedBusiness.generalInfo.contactInfo
+              contactInfo: this.selectedBusiness.generalInfo.contactInfo,
+              allowPayPerService: this.selectedBusiness.generalInfo.allowPayPerService || false,
+              payPerServicePrice: parseInt(this.selectedBusiness.generalInfo.payPerServicePrice || 0)
             };
           }
 

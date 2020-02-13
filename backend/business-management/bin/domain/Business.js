@@ -179,6 +179,7 @@ class Business {
     }
 
     business.generalInfo.name = business.generalInfo.name.trim();
+    business.generalInfo.allowPayPerService = false;
     business._id = uuidv4();
     return RoleValidator.checkPermissions$(
       authToken.realm_access.roles,

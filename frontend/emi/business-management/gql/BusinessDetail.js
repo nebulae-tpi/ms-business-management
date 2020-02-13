@@ -13,6 +13,8 @@ export const getBusiness = gql`
         type
         email
         contactInfo
+        allowPayPerService
+        payPerServicePrice
       }
       contactInfo{
         whatsapp
