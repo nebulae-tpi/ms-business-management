@@ -6,7 +6,7 @@ const CollectionName = "Business";
 const { CustomError } = require("../tools/customError");
 
 class BusinessDA {
-
+ 
   static start$(mongoDbInstance) {
     return Rx.Observable.create((observer) => {
       if (mongoDbInstance) {

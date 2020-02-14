@@ -25,7 +25,7 @@ input BusinessGeneralInfoInput {
   "Pay per service"
   payPerServicePrice: Int
 }
-
+ 
 input BusinessAttributeListInput {
   attributes: [BusinessAttributeInput],
 }
