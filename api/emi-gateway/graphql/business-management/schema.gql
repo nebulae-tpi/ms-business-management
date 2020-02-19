@@ -6,7 +6,7 @@ input BusinessPersistInput {
   "Business status"
   state: Boolean!
 }
-
+ 
 input BusinessGeneralInfoInput {
   "Document Type (FOREIGN ID, CITIZENSHIP_CARD, VAT, ...)"
   documentType: String!,

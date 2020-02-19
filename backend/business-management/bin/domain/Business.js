@@ -12,7 +12,7 @@ const {
   CustomError,
   DefaultError,
 } = require("../tools/customError");
-const {
+const { 
   BUSINESS_MISSING_DATA_ERROR_CODE,
   BUSINESS_NAME_EXISTS_ERROR_CODE,
   BUSINESS_PERMISSION_DENIED_ERROR_CODE
