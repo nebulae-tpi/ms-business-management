@@ -47,7 +47,7 @@ class Business {
       .catch(err => {
         return this.handleError$(err);
       });
-  }
+  } 
 
     /**
    * Gets the business where the user that is performing the request belong

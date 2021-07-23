@@ -77,7 +77,7 @@ module.exports = {
               { root, args, jwt: context.encodedToken },
               2000
             )
-          ),
+          ), 
           catchError(err => handleError$(err, "getBusinessByFilterText")),
           mergeMap(response => getResponseFromBackEnd$(response))
         )
