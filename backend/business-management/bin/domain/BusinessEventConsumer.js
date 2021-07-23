@@ -10,7 +10,7 @@ class BusinessEventConsumer {
     constructor() {
 
     }
-
+  
     /**
      * Persists the business on the materialized view according to the received data from the event store.
      * @param {*} businessCreatedEvent business created event
