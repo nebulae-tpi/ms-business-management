@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2 # for versions before 1.9.0 use apps/v1beta2
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
   name: business-management
@@ -13,7 +13,7 @@ spec:
         app: business-management
     spec:      
       containers:
-      - image: nebulaetpi/business-management.backend.business-management:0.0.15
+      - image: nebulaetpi/business-management.backend.business-management:0.0.16
         name: business-management
         volumeMounts:
         - name: google-application-credentials
