@@ -83,8 +83,6 @@ class Business {
    * @param {string} fieldASTs indicates the business attributes that will be returned
    */
   getBusiness$({ args, jwt, fieldASTs }, authToken) {
-    // const requestedFields = this.getProjection(fieldASTs);
-
     return RoleValidator.checkPermissions$(
       authToken.realm_access.roles,
       "BusinessManagement",

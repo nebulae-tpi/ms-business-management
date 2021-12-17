@@ -283,7 +283,6 @@ workflows:
           requires:
             - build-frontend
             - build-api
-            - build-api-client
             - build-backend
           filters:
             branches:
