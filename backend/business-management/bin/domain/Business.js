@@ -98,7 +98,6 @@ class Business {
       .catch(err => {
         return this.handleError$(err);
       });
-      
   }
 
   /**
@@ -108,7 +107,6 @@ class Business {
    */
   getBusinesses$({ args }, authToken) {
     // const requestedFields = this.getProjection(fieldASTs);
-    console.log("getBusinesses$", args);
     return RoleValidator.checkPermissions$(
       authToken.realm_access.roles,
       "BusinessManagement",
@@ -233,9 +231,6 @@ class Business {
    * @param {string} jwt JWT token
    */
   updateBusinessGeneralInfo$(data, authToken) {
-
-    //console.log(` ========= updateBusinessGeneralInfo$ ========= `);
-    //console.log(`data=${JSON.stringify(data)}  ;;; authToken=${JSON.stringify(authToken)} `);
     
 
     const id = !data.args ? undefined : data.args.id;
