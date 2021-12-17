@@ -111,15 +111,15 @@ type CommandResponse {
 
 type Query {
   "Get business filtered by the business id"
-  getBusiness(id: String!): Business
+  getBusiness(id: String!): Business @requireAuth
   "Get all businesses filtered"
-  getBusinesses(page: Int!, count: Int!, filter: String, sortColumn: String, sortOrder: String): [Business]
+  getBusinesses(page: Int!, count: Int!, filter: String, sortColumn: String, sortOrder: String): [Business] @requireAuth
   "Gets the amount of businesses"
-  getBusinessCount: Int
+  getBusinessCount: Int @requireAuth
   "Gets the businesses by id or name. If limit is applied the query will be limited to the amount defined"
-  getBusinessByFilterText(filterText: String, limit: Int): [Business]
+  getBusinessByFilterText(filterText: String, limit: Int): [Business] @requireAuth
   "Returns the business to which the user belongs"
-  myBusiness: Business
+  myBusiness: Business @requireAuth
 }
 
 type Mutation {
