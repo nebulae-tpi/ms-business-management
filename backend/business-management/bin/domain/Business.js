@@ -231,8 +231,6 @@ class Business {
    * @param {string} jwt JWT token
    */
   updateBusinessGeneralInfo$(data, authToken) {
-    
-
     const id = !data.args ? undefined : data.args.id;
     const generalInfo = !data.args ? undefined : data.args.input;
 
