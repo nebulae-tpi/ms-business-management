@@ -210,6 +210,12 @@ class GraphQlService {
         messageType: "emigateway.graphql.mutation.updateBusinessContactInfo",
         onErrorHandler,
         onCompleteHandler
+      },
+      {
+        aggregateType: "Business",
+        messageType: "drivergateway.graphql.query.BusinessAttributes",
+        onErrorHandler,
+        onCompleteHandler
       }
     ];
   }
@@ -269,6 +275,10 @@ class GraphQlService {
       },
       "emigateway.graphql.mutation.updateBusinessContactInfo": {
         fn: business.updateBusinessContatInfo$,
+        obj: business
+      },
+      "drivergateway.graphql.query.BusinessAttributes": {
+        fn: business.getBusinessAttributes$,
         obj: business
       }
     };

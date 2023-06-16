@@ -100,6 +100,25 @@ class Business {
       });
   }
 
+  getBusinessAttributes$({ args, jwt, fieldASTs }, authToken) {
+    return RoleValidator.checkPermissions$(
+      authToken.realm_access.roles,
+      "BusinessManagement",
+      "getBusinessAttributes$()",
+      BUSINESS_PERMISSION_DENIED_ERROR_CODE,
+      "Permission denied",
+      ["DRIVER"]
+    )
+      .mergeMap(val => {
+        return BusinessDA.getBusiness$(args.id);
+      })
+      .mergeMap(rawResponse => this.buildSuccessResponse$(rawResponse))
+      .catch(err => {
+        return this.handleError$(err);
+      });
+  }
+
+
   /**
    * Gets the businesses filtered by page, count, textFilter, order and column
    *
