@@ -101,6 +101,7 @@ class Business {
   }
 
   getBusinessAttributes$({ args, jwt, fieldASTs }, authToken) {
+    console.log("Llega business RQST ===> ", args)
     return RoleValidator.checkPermissions$(
       authToken.realm_access.roles,
       "BusinessManagement",
@@ -112,7 +113,10 @@ class Business {
       .mergeMap(val => {
         return BusinessDA.getBusiness$(args.id);
       })
-      .mergeMap(rawResponse => this.buildSuccessResponse$(rawResponse))
+      .mergeMap(rawResponse => {
+        console.log("RESULT ==> ", rawResponse);
+        return this.buildSuccessResponse$(rawResponse);
+      })
       .catch(err => {
         return this.handleError$(err);
       });
