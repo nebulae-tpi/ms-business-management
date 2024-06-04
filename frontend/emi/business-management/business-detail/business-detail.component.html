@@ -101,7 +101,7 @@
                 <input matInput name="payPerServiceValue" formControlName="payPerServiceValue" 
                 [(ngModel)]="selectedBusiness.generalInfo.payPerServicePrice"
                 autocomplete="off"
-                  placeholder="{{'BUSINESS.PAY_PER_SERVICE_VALUE' | translate}}" maxlength="9" min="1"
+                  placeholder="{{'BUSINESS.PAY_PER_SERVICE_VALUE' | translate}}" maxlength="9" min="0"
                   currencyMask [options]="{ prefix: '$ ', thousands: ',', precision: '0' }">
               </mat-form-field>
               </div>
