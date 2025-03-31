@@ -136,7 +136,7 @@ class Business {
       "getBusinesses$()",
       BUSINESS_PERMISSION_DENIED_ERROR_CODE,
       "Permission denied",
-      ["PLATFORM-ADMIN"]
+      ["PLATFORM-ADMIN", "CLIENT"]
     )
       .mergeMap(val => {
         return BusinessDA.getBusinesses$(
