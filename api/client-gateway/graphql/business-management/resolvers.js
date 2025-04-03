@@ -153,6 +153,52 @@ module.exports = {
         )
         .toPromise();
     },
+    getBusinessesCities(root, args, context) {
+      return RoleValidator.checkPermissions$(
+        context.authToken.realm_access.roles,
+        contextName,
+        "getBusinessesCities",
+        BUSINESS_PERMISSION_DENIED_ERROR_CODE,
+        "Permission denied",
+        ["PLATFORM-ADMIN", "CLIENT"]
+      )
+        .pipe(
+          mergeMap(() =>{
+            return [
+              {
+                generalInfo: {
+                  name: "Cali",
+                },
+                id: "75cafa6d-0f27-44be-aa27-c2c82807742d"},
+              {
+                generalInfo: {
+                  name: "Bogotá"
+                },
+                id: "7d95f8ef-4c54-466a-8af9-6dd197dd920a"
+              },
+              {
+                generalInfo: {
+                  name: "Medellín"
+                },
+                id: "bf2807e4-e97f-43eb-b15d-09c2aff8b2ab"
+              },
+              {
+                generalInfo: {
+                  name: "Villavicencio"
+                },
+                id: "ec600f7f-1b57-4c47-af77-c6750a8649bd"
+              },
+              {
+                generalInfo: {
+                  name: "Zona Cafetera"
+                },
+                id: "b19c067e-57b4-468f-b970-d0101a31cacb"
+              }
+            ]
+          }),
+        )
+        .toPromise();
+    },
     getBusinessCount(root, args, context) {
       return RoleValidator.checkPermissions$(
         context.authToken.realm_access.roles,

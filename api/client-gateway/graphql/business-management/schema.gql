@@ -114,6 +114,8 @@ type Query {
   getBusiness(id: String!): Business @requireAuth
   "Get all businesses filtered"
   getBusinesses(page: Int!, count: Int!, filter: String, sortColumn: String, sortOrder: String): [Business] @requireAuth
+  "Get all cities by business"
+  getBusinessesCities: [Business] @requireAuth
   "Gets the amount of businesses"
   getBusinessCount: Int @requireAuth
   "Gets the businesses by id or name. If limit is applied the query will be limited to the amount defined"
