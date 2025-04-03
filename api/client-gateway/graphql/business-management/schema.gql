@@ -40,7 +40,7 @@ input BusinessAttributeInput {
 "Business info"
 type Business {
   "Business id"
-  _id: ID
+  _id: String
   "Business general info"
   generalInfo: GeneralInfo
   "Business contact info"
