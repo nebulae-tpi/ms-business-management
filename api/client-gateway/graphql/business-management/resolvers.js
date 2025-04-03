@@ -163,7 +163,7 @@ module.exports = {
         ["PLATFORM-ADMIN", "CLIENT"]
       )
         .pipe(
-          mergeMap(() =>{
+          map(() =>{
             return [
               {
                 generalInfo: {
